@@ -5,7 +5,7 @@ const Page = () => {
         <h1>Hello World🚀</h1>
       </div>
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

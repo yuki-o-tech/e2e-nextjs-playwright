@@ -1,11 +1,21 @@
-import "../styles/globals.css";
+import Provider from './Provider'
+import NavBar from './components/NavBar'
+import MonitorSession from './components/MonitorSession'
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <Provider>
+          <MonitorSession />
+          <NavBar />
+        </Provider>
+        {children}
+      </body>
     </html>
-  );
-};
-
-export default RootLayout;
+  )
+}
